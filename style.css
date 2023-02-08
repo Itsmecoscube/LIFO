@@ -6,7 +6,6 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    cursor: none;
 }
 
 body {
@@ -111,7 +110,7 @@ body::before {
 /* *********************************************************************************
 cursor */
 
-
+/*
 .cursor {
     position: fixed;
     width: 20px;
