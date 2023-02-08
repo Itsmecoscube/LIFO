@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['gitUserData']))
-header('Location:github_login_with_php/index.php'); ?>
+header('Location:github_login/index.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +44,7 @@ header('Location:github_login_with_php/index.php'); ?>
         <h1>Profile</h1>
     <img class="profile-pic" style="width:50px;height:50px;border-radius:25px;" src="<?php echo $_SESSION['gitUserData']['picture'] ?>">
     <p> Welcome, <?php echo $_SESSION['gitUserData']['username']; ?></p>
-    <p>Logout from <a href="github_login_with_php/logout.php">GitHub</a></p>
+    <p>Logout from <a href="github_login/logout.php">GitHub</a></p>
     <p><b>Profile Link:</b> <a href="<?php echo $_SESSION['gitUserData']['link'] ?>" target="_blank">Click to visit GitHub page</a></p>
 
 

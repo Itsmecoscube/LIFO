@@ -9,7 +9,7 @@ define('DB_USER_TBL', 'users');
 // GitHub API configuration 
 define('CLIENT_ID', '2d8d7c64e804aeee66b9'); 
 define('CLIENT_SECRET', '73849c44ca568231132329e00bbe52ea07e2f163'); 
-define('REDIRECT_URL', 'http://localhost/Project1/github_login_with_php/'); 
+define('REDIRECT_URL', 'http://localhost/Project1/github_login/'); 
  
 // Start session 
 if(!session_id()){ 

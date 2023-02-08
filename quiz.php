@@ -19,8 +19,9 @@
     <div class="star star6"></div>
 </section>
 <?php
-//Category 9:GK, 11:Film, 12:Music,
-$api_url = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple';
+//Category 9:GK, 11:Film, 12:Music
+$category = 9;
+$api_url = "https://opentdb.com/api.php?amount=10&category=$category&difficulty=medium&type=multiple";
 
 // Read JSON file
 $json_data = file_get_contents($api_url);
