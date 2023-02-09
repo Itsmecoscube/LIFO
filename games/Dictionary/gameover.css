@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #111;
+}
+section::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent,transparent,#0005,#0004);
+    z-index: 10000;
+}
+.scroll{
+    width: calc(100% +400px);
+    left: -400px;
+    display: flex;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.5);
+    transform: rotate(calc(var(--d)*1deg)) translateY(calc(var(--y)*1px));
+}
+.scroll div{
+    background: #e9c804;
+    color: #1d1104;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    white-space: nowrap;    /*remove textwrap*/
+    animation: animate 60s linear infinite;
+    animation-delay: -60s;
+}
+.scroll div:nth-child(2){
+    animation: animate-two 60s linear infinite;
+    animation-delay: -30s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate-two
+{
+    0%
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(-200%);
+    }
+}
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background: rgb(8, 8, 8);
+    padding: 1rem 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 4.5rem;
+    width: 100%;
+    filter: drop-shadow(0 0 2px black) drop-shadow(0 0 2px white);
+    z-index: 100;
+}
+
+.webname {
+    text-transform: capitalize;
+    font-size: 1.4rem;
+
+}
+
+.maintabs {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1.1rem;
+}
+
+
+.dropdown {
+    border-radius: 50%;
+    padding: 0.6rem;
+    border: 0.2rem solid rgb(207, 203, 203);
+}
+
+.content {
+    position: relative;
+    top: 4.5rem;
+}

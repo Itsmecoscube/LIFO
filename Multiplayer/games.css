@@ -1,0 +1,103 @@
+.boxx {
+    margin: 8rem 8rem 8rem 8rem;
+    border-radius: 4rem;
+    background: rgb(20, 20, 20);
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0);
+
+}
+
+.top {
+    height: 26rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 4rem 4rem 0 0;
+    /* background-image: url(../images/img1.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    position: relative;
+    top: 19rem;
+    padding: 1rem;
+}
+
+.tabsection {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0 0rem 1rem rgb(0, 0, 0);
+    min-height: 10vh;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.tabs {
+    background: 1;
+    font-size: 1.2rem;
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+
+}
+
+.tablinks {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.tablinks.active,
+.tablinks:hover {
+    box-shadow: 0 0.25rem 1rem rgb(0, 0, 0);
+
+}
+
+.tabsection button {
+    text-transform: capitalize;
+}
+
+.descriptionsection {
+    min-height: 20vh;
+    padding: 2rem;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background: rgb(8, 8, 8);
+    padding: 1rem 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 4.5rem;
+    width: 100%;
+    filter: drop-shadow(0 0 2px black) drop-shadow(0 0 2px white);
+    z-index: 100;
+}
+
+.webname {
+    text-transform: capitalize;
+    font-size: 1.4rem;
+
+}
+
+.maintabs {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1.1rem;
+}
+
+
+.dropdown {
+    border-radius: 50%;
+    padding: 0.6rem;
+    border: 0.2rem solid rgb(207, 203, 203);
+}
+
+.content {
+    position: relative;
+    top: 4.5rem;
+}
+/* ***************************************************************************** */

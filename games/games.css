@@ -61,4 +61,45 @@
     padding: 2rem;
 }
 
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background: rgb(8, 8, 8);
+    padding: 1rem 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 4.5rem;
+    width: 100%;
+    filter: drop-shadow(0 0 2px black) drop-shadow(0 0 2px white);
+    z-index: 100;
+}
+
+.webname {
+    text-transform: capitalize;
+    font-size: 1.4rem;
+
+}
+
+.maintabs {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1.1rem;
+}
+
+
+.dropdown {
+    border-radius: 50%;
+    padding: 0.6rem;
+    border: 0.2rem solid rgb(207, 203, 203);
+}
+
+.content {
+    position: relative;
+    top: 4.5rem;
+}
+
 /* ***************************************************************************** */
