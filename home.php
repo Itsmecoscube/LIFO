@@ -6,6 +6,7 @@ header('Location:github_login/index.php'); ?>
 <html lang="en">
 
 <head>
+<link rel="icon" type="image/x-icon" href="images/icon2.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +24,13 @@ header('Location:github_login/index.php'); ?>
     <title>Document</title>
     <style>
       html,
-      body,
-      .frame {
+      body{
+        width: 800px;
+        height: 500px;
+        margin-top: 40px;
+        border: none;
+      }
+      .frame{
         width: 800px;
         height: 500px;
         margin: 0;
@@ -38,7 +44,22 @@ header('Location:github_login/index.php'); ?>
 </head>
 
 <body>
-
+<div class="nav">
+    <div class="webname">website_name</div>
+    <div class="maintabs">
+        <li><a href="#">Home</a></li>
+        <li><a href="games/universes.php">Universes</a></li>
+        <li><a href="#">etc</a></li>
+        <li><a href="#">etc</a></li>
+    </div>
+    <div class="profile">
+        <div class="dropdown dropdown-end">
+            <label tabindex="0"><?php echo $_SESSION['gitUserData']['username'] ?></label>
+          </div>
+    </div>
+</div>
+<p align="right" style="position:fixed;left:1325px;top:10px;font-size: 22px;"><?php echo $_SESSION['gitUserData']['username'] ?></p>
+<img  align="right" src="images/avatar-removebg.png" style="width:180px;position:fixed;left:1350px;top:100px;">
     <section class="main">
         <div w3-include-html="index.html"></div>
         <h1>Profile</h1>
@@ -48,65 +69,15 @@ header('Location:github_login/index.php'); ?>
     <p><b>Profile Link:</b> <a href="<?php echo $_SESSION['gitUserData']['link'] ?>" target="_blank">Click to visit GitHub page</a></p>
 
 
-    <!-- Avatar Frame -->
-    <div style="position:relative;">
-    <iframe id="frame" class="frame" allow="camera *; microphone *"></iframe>
-
-    <script>
-      const subdomain = 'quiztopia';
-      const frame = document.getElementById('frame');
-
-      frame.src = `https://${subdomain}.readyplayer.me/avatar?frameApi`;
-
-      window.addEventListener('message', subscribe);
-      document.addEventListener('message', subscribe);
-
-      function subscribe(event) {
-        const json = parse(event);
-
-        if (json?.source !== 'readyplayerme') {
-          return;
-        }
-
-        // Susbribe to all events sent from Ready Player Me once frame is ready
-        if (json.eventName === 'v1.frame.ready') {
-          frame.contentWindow.postMessage(
-            JSON.stringify({
-              target: 'readyplayerme',
-              type: 'subscribe',
-              eventName: 'v1.**'
-            }),
-            '*'
-          );
-        }
-      }
-
-      function parse(event) {
-        try {
-          return JSON.parse(event.data);
-        } catch (error) {
-          return null;
-        }
-      }
-
-      function displayIframe() {
-        document.getElementById('frame').hidden = false;
-      }
-    </script>       
-</div>
-    <!-- End of Avatar Frame -->
-    <form method="post" style="position:relative;bottom:300px;left:800px;">
-    Paste the Avatar URL<br />
-    <input type="text" name="avatar-url" id="avatar-url" style="width:200px;">
-    <br>
-    <button type="submit" style="width:70px;height:40px;background-color:blue; border-radius:15px;">Save</button>
-  </form>
+    
   
   <?php
 
   ?>
+  <a href="quiz.php?category=9">Answer Film Quiz here</a><br>
+  <a href="quiz.php?category=18">Answer Science Quiz here</a>
 
-
+  
 
 
 

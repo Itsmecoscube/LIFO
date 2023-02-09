@@ -1,0 +1,236 @@
+.star.star4 {
+    animation-delay: -3s;
+    opacity: 0;
+    background: url(images/star4.png);
+}
+
+.star.star5 {
+    opacity: 0;
+    animation-delay: -4s;
+    background: url(images/star5.png);
+}
+
+.star.star6 {
+    opacity: 0;
+    animation-delay: -5s;
+    background: url(images/star6.png);
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 80%;
+        height: 80%;
+    }
+
+    .contentBx .card {
+        width: 80%;
+    }
+
+    .contentBx .card .imgBx {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+.boxx {
+    margin-top: 10vh;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 10vh;
+    margin-left: 50%;
+}
+
+.container .icon {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .icon .imgBx {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 4px #222, 0 0 0 6px #fff;
+    transform: rotate(calc(360deg/5*var(--i)));
+    transform-origin: 340px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.container .icon .imgBx.active {
+    box-shadow: 0 0 0 4px #222, 0 0 0 12px #ff1d50;
+}
+
+.container .icon .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(calc(-360deg/5*var(--i)));
+    transition: 0.5s;
+    filter: grayscale(1);
+}
+
+.container .icon .imgBx.active img {
+    filter: grayscale(0);
+}
+
+.content {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    inset: 60px;
+    border: 4px solid transparent;
+    border-left: 4px solid #2196f3;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate_01 5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate_01 {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.content::after {
+    content: '';
+    position: absolute;
+    inset: 120px;
+    border: 4px solid transparent;
+    border-left: 4px solid #ff1d50;
+    border-right: 4px solid #fff;
+    border-radius: 50%;
+    animation: animate_02 2.5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes animate_02 {
+    0% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+.contentBx {
+    position: absolute;
+    transform: scale(0);
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contentBx.active {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.contentBx .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contentBx .card .imgBx {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contentBx .card .imgBx img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentBx .card .textBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerleft {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 5rem 0rem 5rem 8rem;
+    position: absolute;
+    z-index: 20;
+}
+
+.mainns {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.bottomg {
+    font-size: 1.3rem;
+}
+
+.btnn {
+
+    color: black;
+    border: 0.2rem solid rgb(199, 199, 199);
+    background-color: rgb(199, 199, 199);
+    font-weight: 700;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.btnn:hover {
+    font-weight: 700;
+    background-color: #181818;
+    color: rgb(199, 199, 199);
+    border: 0.2rem solid rgb(199, 199, 199);
+}

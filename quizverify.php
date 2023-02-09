@@ -1,7 +1,13 @@
-<?php session_start(); ?>
+<?php session_start(); 
+if (!isset($_SESSION['gitUserData']))
+header('Location:github_login/index.php');
+if(!isset($_POST['submit']))
+header('Location:home.php');
+?>
 <html>
     <head>
         <title>Score</title>
+<link rel="icon" type="image/x-icon" href="images/icon2.ico">
         <link href="./style.css" rel="stylesheet">
         <style>
             *{
@@ -13,6 +19,8 @@
         </style>
     </head>
 <body>
+<p align="right" style="position:fixed;left:1300px;"><?php echo $_SESSION['gitUserData']['username'] ?></p>
+<img  align="right" src="images/avatar-removebg.png" style="width:180px;position:fixed;left:1300px;top:50px;">
 <section class="bg">
     <div class="star star1"></div>
     <div class="star star2"></div>
@@ -42,5 +50,6 @@ $score=0;
 
 ?>
 </div>
+<a href="home.php" style="cursor:pointer;">Go Back Home</a>
 </body>
 </html>

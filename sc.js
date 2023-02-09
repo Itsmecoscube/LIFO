@@ -39,4 +39,42 @@ document.addEventListener('click', (e) => {
 
 setTimeout(function () {
     $('.loader_main').fadeToggle();
-}, 5000);
+}, 2000);
+
+//for universes
+let imgBx = document.querySelectorAll('.imgBx');
+let contentBx = document.querySelectorAll('.contentBx');
+
+for (let i = 0; i < imgBx.length; i++) {
+    imgBx[i].addEventListener('mouseover', function () {
+        for (let i = 0; i < contentBx.length; i++) {
+            contentBx[i].className = 'contentBx';
+        }
+        document.getElementById(this.dataset.id).className = 'contentBx active';
+
+        for (let i = 0; i < imgBx.length; i++) {
+            imgBx[i].className = 'imgBx';
+        }
+        this.className = 'imgBx active';
+    })
+}
+
+
+
+
+// fuction for tabs
+function opentab(evt, tabn) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabn).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();

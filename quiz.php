@@ -1,7 +1,12 @@
-<?php session_start(); ?>
+<?php session_start();
+if (!isset($_SESSION['gitUserData']))
+    header('Location:github_login/index.php');
+?>
 <html>
 <head>
 <link href="./style.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="images/icon2.ico">
+<title>Quiz</title>
 <style>
     *{
         font-size:22px;
@@ -9,7 +14,8 @@
 </style>
 </head>
 <body>
-
+<p align="right" style="position:fixed;left:1300px;top:10px;"><?php echo $_SESSION['gitUserData']['username'] ?></p>
+<img  align="right" src="images/avatar-removebg.png" style="width:180px;position:fixed;left:1300px;top:50px;">
 <section class="bg">
     <div class="star star1"></div>
     <div class="star star2"></div>
@@ -18,10 +24,11 @@
     <div class="star star5"></div>
     <div class="star star6"></div>
 </section>
+<button onclick="history.go(-1)" style="background-color:black;"><a style="color:aqua;margin:20;">Exit Quiz</a></button>
 <?php
 //Category 9:GK, 11:Film, 12:Music
-$category = 9;
-$api_url = "https://opentdb.com/api.php?amount=10&category=$category&difficulty=medium&type=multiple";
+$category = $_GET["category"];
+$api_url = "https://opentdb.com/api.php?amount=10&category=$category&type=multiple";
 
 // Read JSON file
 $json_data = file_get_contents($api_url);

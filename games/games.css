@@ -1,0 +1,64 @@
+.boxx {
+    margin: 0rem 8rem 8rem 8rem;
+    border-radius: 4rem;
+    background: rgb(20, 20, 20);
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0);
+
+}
+
+.top {
+    height: 26rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 4rem 4rem 0 0;
+    /* background-image: url(../images/img1.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    position: relative;
+    top: 19rem;
+    padding: 1rem;
+}
+
+.tabsection {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-shadow: 0 0rem 1rem rgb(0, 0, 0);
+    min-height: 10vh;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.tabs {
+    font-size: 1.2rem;
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+
+}
+
+.tablinks {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.tablinks.active,
+.tablinks:hover {
+    box-shadow: 0 0.25rem 1rem rgb(0, 0, 0);
+
+}
+
+.tabsection button {
+    text-transform: capitalize;
+}
+
+.descriptionsection {
+    min-height: 20vh;
+    padding: 2rem;
+}
+
+/* ***************************************************************************** */
