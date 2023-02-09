@@ -1,45 +1,59 @@
 <?php
 session_start();
-if(!isset($_SESSION['gitUserData']))
-header('Location:github_login/index.php'); ?>
+if (!isset($_SESSION['gitUserData']))
+  header('Location:github_login/index.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<link rel="icon" type="image/x-icon" href="images/icon2.ico">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiztopia</title>
+  <link rel="icon" type="image/x-icon" href="images/icon2.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiztopia</title>
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
-        <link href="./style.css" rel="stylesheet">
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-      html,
-      body,
-      .frame {
-        width: 800px;
-        height: 500px;
-        margin: 0;
-        padding: 20px;
-        border: none;
-      }
-      *{
-        cursor:default;
-      }
-    </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <style>
+    * {
+      background-color: black;
+    }
+  </style>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    html,
+    body,
+    .frame {
+      width: 800px;
+      height: 500px;
+      margin: 0;
+      padding: 0px;
+      border: none;
+    }
+
+    * {
+      cursor: default;
+    }
+  </style>
 </head>
 
-<!-- Avatar Frame -->
-<div style="position:relative;">
+<body>
+  <section class="bg">
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+    <div class="star star6"></div>
+  </section>
+  <!-- Avatar Frame -->
+  <div style="position:relative; padding:50px;">
     <iframe id="frame" class="frame" allow="camera *; microphone *"></iframe>
 
     <script>
@@ -82,12 +96,13 @@ header('Location:github_login/index.php'); ?>
       function displayIframe() {
         document.getElementById('frame').hidden = false;
       }
-    </script>       
-</div>
-    <!-- End of Avatar Frame -->
-    <form method="post" style="position:relative;bottom:300px;left:800px;" action="home.php">
+    </script>
+  </div>
+  <!-- End of Avatar Frame -->
+  <form method="post" style="position:relative;bottom:300px;left:850px;" action="home.php">
     Paste the Avatar URL<br />
     <input type="text" name="avatar-url" id="avatar-url" style="width:200px;">
     <br>
     <button type="submit" style="width:70px;height:40px;background-color:blue; border-radius:15px;">Save</button>
   </form>
+</body>

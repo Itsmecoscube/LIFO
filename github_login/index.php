@@ -28,22 +28,24 @@ if (isset($accessToken)) {
 
         // Storing user data in the session 
         $_SESSION['userData'] = $userData;
-        header('Location:../avatar.php');
+        
         // Render Github profile data 
-        $output = '<h2>Profile</h2>';
+        //$output = '<h2>Profile</h2>';
         $output .= '<div class="ac-data">';
-        $output .= '<img class="profile-pic" src="' . $userData['picture'] . '">';
+        //$output .= '<img class="profile-pic" src="' . $userData['picture'] . '">';
         $output .= '<p><b>ID:</b> ' . $userData['oauth_uid'] . '</p>';
         $output .= '<p><b>Name:</b> ' . $userData['name'] . '</p>';
         $output .= '<p><b>Login Username:</b> ' . $userData['username'] . '</p>';
         $output .= '<p><b>Email:</b> ' . $userData['email'] . '</p>';
         $output .= '<p><b>Location:</b> ' . $userData['location'] . '</p>';
         $output .= '<p><b>Profile Link:</b> <a href="' . $userData['link'] . '" target="_blank">Click to visit GitHub page</a></p>';
-        $output .= '<p>Logout from <a href="logout.php">GitHub</a></p>';
+        $output .= '<p>Logout from <a href="github_login/logout.php">GitHub</a></p>';
         $output .= '</div>';
     } else {
         $output = '<h3 style="color:red">Something went wrong, please try again!</h3>';
     }
+    header('Location:../avatar.php');
+    $_SESSION['userOutput'] = $output;
 } elseif (isset($_GET['code'])) {
     // Verify the state matches the stored state 
     if (!$_GET['state'] || $_SESSION['state'] != $_GET['state']) {
