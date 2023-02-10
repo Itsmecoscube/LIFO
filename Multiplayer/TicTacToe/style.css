@@ -54,6 +54,9 @@ nav ul{
 }
 */
 
+.info{
+    font-size:500%;
+}
 .gameInfo{
     padding: 0 34px;
     font-family: 'Amatic SC', cursive;

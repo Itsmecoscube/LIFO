@@ -110,7 +110,7 @@ if (!isset($_SESSION['gitUserData']))
                             </p><p>The players take turns marking their symbol on the 3x3 grid until one player gets three in a row.
                             </p><p>If all the squares are filled and no player has three in a row, the game is a draw.
                             </p><p>The player who successfully places three of their symbols in a row wins the game.
-
+                            <img src="rabbit2.png" alt="" style="width:25% ;height: 50%;">
                             </p>
                         </div>
 

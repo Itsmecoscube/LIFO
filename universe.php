@@ -38,7 +38,10 @@ if (!isset($_SESSION['gitUserData']))
             <br><br>
             <a href="Multiplayer/multiuniverses.php"><button class="tablinks" style="background-color: yellow; color:black;font-weight: 500;">MULTI PLAYER</button>                      
         </div>
-        <img src="quiztopia.png" class="prod"> 
+        <a href="./Multiplayer/puzzle.php">
+            <img src="quiztopia.png" class="prod" alt="Button">
+        </a>
+
     </div> 
 </body>
 </html>

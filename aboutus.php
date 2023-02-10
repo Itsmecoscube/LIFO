@@ -92,7 +92,7 @@ if (!isset($_SESSION['gitUserData']))
                             talent for
                             finding creative solutions. He has a unique perspective on the intersection of technology
                             and business, and
-                            is always looking for ways to bring new ideas to life.
+                            is always looking for ways to bring new ideas to life🐇.
                             Whether he is working on a group project or an individual task,his ultimate goal is always
                             to find
                             the best possible solution."
