@@ -50,20 +50,3 @@ if (!isset($_SESSION['gitUserData']))
     <script src="script.js"></script>
 </body>
 </html>
-
-<!--
-DOUBTS: 23/12/22
-1.	What is display:flex?
-2.	How to take fonts from google?                                  DONE!
-
-DOUBTS: 24/12/22
-1.  Difference between div,p and span tags.
-2.  How to display GIF through html?
-3.  Use of display:grid?
-4.  Utility class?
-
-DOUBTS: 25/12/22
-1.  Is const changeturn()=>{} not a function?\
-2.  Arrow function
-3.  document.getElementsByClassName(Turn)[0].innerText="Turn for "+Turn;
--->

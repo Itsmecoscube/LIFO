@@ -54,7 +54,7 @@ if (!isset($_POST['submit']))
         $email = $_SESSION['userData']['email'];
         $category = $_GET['category'];
         $name = $_SESSION['userData']['name'];
-        echo $email.$name;
+
         $mysqli = new mysqli('localhost', 'root', '', 'hack1');
 if ($mysqli->connect_error) {
     die('Connection Failed: ' . $mysqli->connect_error);
